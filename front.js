@@ -7,10 +7,10 @@ window.onload = function () {
 var _paper;
 
 function circle_coords(theta_number, slices) {
-	return {
-		x: Math.cos(theta_number * (2 * Math.PI) / slices),
-		y: Math.sin(theta_number * (2 * Math.PI) / slices)
-	};
+    return {
+        x: Math.cos(theta_number * (2 * Math.PI) / slices),
+        y: Math.sin(theta_number * (2 * Math.PI) / slices)
+    };
 }
 
 function draw_graph(center, radius, node_radius, entitiesCount) {
@@ -50,9 +50,9 @@ function create_inputs(center, radius, node_radius, entitiesCount) {
 
     var buttonRedraw = create_button(inputsContainer, "Draw", function (e) {
         draw_graph(parseInt(inputCenter.value),
-                   parseInt(inputRadius.value),
-                   parseInt(inputNodeRadius.value),
-                   parseInt(inputEntityCount.value));
+            parseInt(inputRadius.value),
+            parseInt(inputNodeRadius.value),
+            parseInt(inputEntityCount.value));
     });
 }
 
@@ -86,7 +86,4 @@ function create_button(parentElement, text, onClick) {
     parentElement.appendChild(buttonElement);
 
     return buttonElement;
-}
-function getGraphArgs(inputCenter, inputRadius, inputNodeRadius, inputEntityCount) {
-
 }
